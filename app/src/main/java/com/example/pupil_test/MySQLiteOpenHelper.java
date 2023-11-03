@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
     //数据库版本号
-    public static final String DB_NAME = "user";
+    public static final String DB_NAME = "user";//11
     private Context context;
     //在SQLiteOpenHelper的子类当中，必须有该构造函数
     public MySQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
