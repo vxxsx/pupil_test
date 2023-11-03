@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="174dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="题目"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/subject_id"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563" />
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="139dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:height="42dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="结果（小数保留两位）"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/subject_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/subject_id"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:hint="id"
+        android:textSize="20sp"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="405dp"
+        android:layout_height="424dp"
+        android:layout_marginBottom="28dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_id">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="83dp"
+                android:layout_height="61dp"
+                android:text="确认"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/query"
+                android:layout_width="83dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="24dp"
+                android:text="查询"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="83dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="24dp"
+                android:text="删除"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/modify"
+                android:layout_width="83dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="24dp"
+                android:text="修改"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
